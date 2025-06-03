@@ -75,3 +75,11 @@
 
 fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json().then(data => console.log(data)).catch(error => console.log("An Error Occured: ", error)))
 
+//Destructuring
+const {name, age, height} ={
+    name: "Adeola",
+    age: 25,
+    height: "5'6"
+}
+console.log(name, age, height); // This destructures the object and logs the values to the console.
+
