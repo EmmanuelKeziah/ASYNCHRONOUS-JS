@@ -34,7 +34,7 @@
 // call()
 // console.log("Continue Tasks");
 
-//API helps us  send and retrieve data from a server. When sending data to the server, ensure it is an asynchronous operation so that it does not block the execution of other codes.
+//API(Application programming interface) helps us  send and retrieve data from a server. When sending data to the server, ensure it is an asynchronous operation so that it does not block the execution of other codes. 
 //Example of an API call is "fetch()";
 
 //The fetch() function takes in parameters and returns a promise. 
@@ -51,14 +51,27 @@
 
 // A promise is either resolved or rejected. A promise is resolved when the operation is successful and rejected when the operation fails.
 
+//NOTE: Calling a function might not need curly braces, but when calling multiple functions, you need to use curly braces to wrap the function calls.
 
-const apiCall = () => {
-    const check = fetch("https://jsonplaceholder.typicode.com/posts", {method: "GET"})
-    // .then(res => res.json()) // This converts the response to JSON format.
-    // .then(ade => ade.json());
-    //OR
-     
-    .then(data => console.log(data));
+// Parameters are variables that are passed into a function. They allow you to pass data into a function so that it can be used within the function.
 
-}
-apiCall();
+// const apiCall = () => {
+// //     const check = fetch("https://jsonplaceholder.typicode.com/posts", {method: "GET"})
+// //     .then(res => res.json()) // This converts the response to JSON format.
+// //     // .then(ade => ade.json())//ade can be replaced with any variable name.
+// //     .then(data => console.log(data));
+    
+
+// // }
+// // apiCall();
+
+// // OR
+
+// fetch('https://jsonplaceholder.typicode.com/posts').then(
+//     res => res.json().then(
+//         data => console.log(data) // This converts the response to JSON format and logs the data to the console.
+//     )
+// )
+
+fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json().then(data => console.log(data)).catch(error => console.log("An Error Occured: ", error)))
+
