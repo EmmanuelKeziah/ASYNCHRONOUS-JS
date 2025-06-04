@@ -67,13 +67,13 @@
 
 // // OR
 
-// fetch('https://jsonplaceholder.typicode.com/posts').then(
-//     res => res.json().then(
-//         data => console.log(data) // This converts the response to JSON format and logs the data to the console.
-//     )
-// )
+fetch('https://jsonplaceholder.typicode.com/posts').then(
+    res => res.json().then(
+        data => console.log(data) // This converts the response to JSON format and logs the data to the console.
+    )
+)
 
-fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json().then(data => console.log(data)).catch(error => console.log("An Error Occured: ", error)))
+// fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json().then(data => console.log(data)).catch(error => console.log("An Error Occured: ", error)))
 
 //Destructuring
 const {name, age, height} ={
