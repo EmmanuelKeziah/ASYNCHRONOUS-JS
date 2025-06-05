@@ -83,3 +83,16 @@ const {name, age, height} ={
 }
 console.log(name, age, height); // This destructures the object and logs the values to the console.
 
+
+//06-05-2025
+//Error Handling in JavaScript
+//Using the try-catch block.
+try {
+    fetch(url);// Try to fetch this data from the server.
+    //if there is an error, it will be caught in the catch block.
+}catch{
+    console.log(err);
+}finally{
+    console.log("This will handle the errors that the try and catch cant");
+    // This block will always run, regardless of whether an error occurred or not.  
+}
