@@ -96,3 +96,50 @@ try {
     console.log("This will handle the errors that the try and catch cant");
     // This block will always run, regardless of whether an error occurred or not.  
 }
+
+//Callbacks are used to handle asynchronous operations in JavaScript. They allow you to execute a function after another function has completed its execution.
+setTimeout (() => {
+    // The (() => {}) is the call back function that handles asynchronous operations well.
+}, 2000); // This will run after 2 seconds.
+ 
+// //JSON
+// J & S - JavaScript
+// O - Object
+// N - Notation 
+//JSON is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is often used to transmit data between a server and a web application.
+
+//.then and .catch methods are used to handle promises.
+// let movies =fetch (url);
+// let newMovies = fetch(url).then(res => res.json());
+// console.log(movies); 
+
+// //OR
+// let movies =fetch (url);
+// let newMovies = fetch(url)
+// .then(response => {
+//     return response.json();
+// })
+// .then(data => console.log(data));
+// console.log(movies); 
+
+// async function fetchMovies() {
+//     let blogPosts = await fetch('https://jsonplaceholder.typicode.com/posts');
+//     let relativePosts = await blogPosts.json();
+// }
+//The async function shows that we are dealing with promises, it converts the function to a p. The await will wait for the promise to be resolved before executing the next line of code. 
+//N.B: If you use await, you must use the async keyword before the function declaration, you shouldn't use await with the ".then" method because they both serve the same purpose of handling promises. 
+// Promises will go to the microtask queue while the async function will go to the call stack.
+
+// A-CALL STACK: Stacks tasks in the order they are called, executing them one by one from the top of the stack(in a LIFO manner - Last In First Out).
+// B-WEB APIS: The tasks that take time to execute, such as setTimeout, fetch, etc are handled by the Web APIs. They are managed by the browser and are not part of the JavaScript engine.
+// C-CALLBACK QUEUE ~~ MICROTASK QUEUE: This is where the tasks that are ready to be executed are stored. It holds the tasks that are waiting to be executed after the current task in the call stack is completed.  The callback queue is also known as the microtask queue. 
+// D-EVENT LOOP: Constantly checks if there are events that needs to be added to the call stack for execution.
+
+console.log ('I am a boy');
+setTimeout(() => {
+    console.log ('How are you?')
+}, 2000);
+console.log ('I am fine');
+
+
+//Immediately Invoked Function Expression (IIFE): This is a function that is executed immediately after it is defined. It is used to create a new scope and avoid polluting the global scope.They are immediately executed and do not need to be called later like:( function(){}).
