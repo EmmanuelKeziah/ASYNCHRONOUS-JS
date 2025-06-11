@@ -143,4 +143,4 @@ console.log ('I am fine');
 
 
 //Immediately Invoked Function Expression (IIFE): This is a function that is executed immediately after it is defined. It is used to create a new scope and avoid polluting the global scope.
-// They are immediately executed and do not need to be called later like:( function(){})..
+// They are immediately executed and do not need to be called later like:( function(){}).
